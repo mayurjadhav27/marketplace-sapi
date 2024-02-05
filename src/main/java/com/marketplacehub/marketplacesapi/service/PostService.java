@@ -12,4 +12,6 @@ public interface PostService {
 
     public List<Post> getAllPostsforCurrentUser(String emailId);
 
+    public List<Post> getPostsByCategory(String category);
+
 }

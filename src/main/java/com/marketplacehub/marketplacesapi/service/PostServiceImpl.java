@@ -26,4 +26,9 @@ public class PostServiceImpl implements PostService{
     public List<Post> getAllPostsforCurrentUser(String emailId) {
         return postRepo.findPostsByEmailId( emailId);
     }
+
+    @Override
+    public List<Post> getPostsByCategory(String category) {
+        return postRepo.findPostsByCategory(category);
+    }
 }

@@ -12,4 +12,6 @@ public interface PostRepo extends JpaRepository<Post,Integer> {
     @Query(value = "SELECT * FROM Post WHERE email_id = ?1", nativeQuery = true)
     List<Post> findPostsByEmailId(String emailId);
 
+    @Query(value = "SELECT * FROM Post WHERE post_category = ?1", nativeQuery = true)
+    List<Post> findPostsByCategory(String category);
 }
